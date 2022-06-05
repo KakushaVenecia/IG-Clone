@@ -1,0 +1,63 @@
+{%load bootstrap4%}
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="static/signup.css">
+<main>
+    <div class="page">
+        <div class="header">
+            <img src="static/landing/logo.png" style="width:70%">
+            <p>Sign up to see photos and videos from your friends.</p>
+            <button><i class="fab fa-facebook-square"></i> Log in with Facebook</button>
+            <div>
+                <hr>
+                <p>OR</p>
+                <hr>
+            </div>
+        </div>
+        <div class="container">
+            <form action="" method='post'>
+                {%csrf_token%}
+                {{register_form|crispy}}
+               <input type="submit" value="SignUp" class="mt-2 btn btn-primary w-100 disabled">
+            </form>
+
+            <ul>
+                <li>By signing up, you agree to our</li>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Data Policy</a></li>
+                <li>and</li>
+                <li><a href="">Cookies Policy</a> .</li>
+            </ul>
+        </div>
+    </div>
+    <div class="option">
+        <p>Have an account? <a href="{% url 'landing' %}">Log in</a></p>
+    </div>
+    <div class="otherapps">
+        <div class="row py-2">
+        
+        <p>Get the app.</p>
+        <!-- <div class="col-5"> -->
+        <a href=""><img src=" static/landing/google-play.png" style="width:20%"></a>
+        <a href=""><img src=" static/landing/app-store.png" style="width:20%"></a>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="">Meta</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">API</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Top Accounts</a></li>
+            <li><a href="">Hashtags</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Locations</a></li>
+            <li><a href="">Instagram Lite</a></li>
+            <li><a href="">English</a></li>
+        </ul>
+        <p>© 2022 Instagram from Meta</p>
+    </div>
+</main>
