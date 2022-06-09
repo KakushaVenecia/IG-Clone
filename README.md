@@ -66,7 +66,7 @@ Scenario: A new user can input registration details and login using the details
 
   Then I can upload a picture to my timeline
 
-#Known Bugs 
+# Known Bugs 
 
 The images of all users appear in everyones profile. 
 
