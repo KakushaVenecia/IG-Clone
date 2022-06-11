@@ -15,13 +15,13 @@
   {% endif %}
 
   {% block styles %}
+   <link rel="stylesheet" href="static/style.css">
   {% bootstrap_css %}
-   <link rel="stylesheet" href="static/nav.css">
   {% endblock %}
 
 </head>
-
 <body>
+  <div class="containerfluid"></div>
   {% include "navbar.html" %}
 
   {% block content %}
